@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,17 +7,20 @@
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
+
 header {
-    background-color: #f0f0f0;
+    background-color: rgba(240, 240, 240, 0.95); /* شفافية خفيفة للترويسة */
     width: 100%;
     position: fixed;
-    z-index: 1000;
+    top: 0; /* ضمان أن الترويسة في أعلى الصفحة */
+    z-index: 1000; /* ضمان أن الترويسة تبقى فوق باقي العناصر */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     flex-wrap: wrap;
 }
+
 .logo {
     flex: 1 100%;
     text-decoration: none;
@@ -27,11 +31,13 @@ header {
     text-align: center;
     margin-bottom: 10px;
 }
+
 .navigation {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .navigation a {
     color: #3a6cf4;
     text-decoration: none;
@@ -40,27 +46,30 @@ header {
     padding-left: 30px;
     margin: 5px 0;
 }
+
 .navigation a:hover {
     color: #601cfc;
 }
+
 section {
-    padding: 100px 200px;
+    padding: 160px 20px 20px; /* تعديل البطانة لضمان عدم إخفاء المحتوى خلف الترويسة */
 }
+
 .main {
     width: 100%;
-    min-width: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url(images/background.jpeg) no-repeat;
+    background: url('images/background.jpeg') no-repeat center center fixed;
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
 }
+
 .main h2 {
     color: #ffffff;
     font-size: 1.4em;
     font-weight: 500;
 }
+
 .main h2 span {
     display: inline-block;
     margin-top: 10px;
@@ -68,6 +77,7 @@ section {
     font-size: 3em;
     font-weight: 600;
 }
+
 .main h3 {
     color: #ffffff;
     font-size: 2em;
@@ -76,6 +86,7 @@ section {
     margin-top: 10px;
     margin-bottom: 30px;
 }
+
 .main-btn {
     color: #ffffff;
     background-color: #462692;
@@ -89,115 +100,19 @@ section {
     margin-bottom: 40px;
     transition: 0.7s ease;
 }
+
 .main-btn:hover {
     background-color: #0a48f3;
     transform: scale(1.1);
 }
+
 .social-icon a {
     color: #ffffff;
     font-size: 1.7em;
     padding-right: 30px;
 }
-.title {
-    display: flex;
-    justify-content: center;
-    color: #3a6cf4;
-    font-size: 2.2em;
-    font-weight: 800;
-    margin-bottom: 30px;
-}
-.content {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-.card {
-    background-color: #ffffff;
-    width: 21.25em;
-    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
-    border-radius: 10px;
-    padding: 25px;
-    margin: 15px;
-    transition: 0.7s ease;
-}
-.card:hover {
-    transform: scale(1.1);
-}
-.icon {
-    color: #601cfc;
-    font-size: 4em;
-    text-align: center;
-}
-.info {
-    text-align: center;
-}
-.info h3 {
-    color: #3a6cf4;
-    font-size: 1.2em;
-    font-weight: 700;
-    margin: 10px;
-}
-.projects {
-    background-color: #41414c;
-}
-.projects .content {
-    margin-top: 30px;
-}
-.project-cart {
-    background-color: #ffffff;
-    border: 1px solid #ffffff;
-    min-height: 14em;
-    overflow: hidden;
-    border-radius: 10px;
-    margin: 20px;
-    transition: 0.7s ease;
-}
-.project-cart:hover {
-    transform: scale(1.1);
-}
-.project-image img {
-    width: 100%;
-}
-.project-info {
-    padding: 1em;
-}
-.project-category {
-    font-size: 0.8em;
-    color: #000;
-}
-.project-title {
-    display: flex;
-    justify-content: space-between;
-    text-transform: uppercase;
-    font-weight: 800;
-    margin-top: 10px;
-}
-.more-details {
-    text-decoration: none;
-    color: blueviolet;
-}
-.more-details:hover {
-    color: #601cfc;
-}
-.about-image img {
-    width: 100%;
-    max-width: 200px;
-}
-.about-language {
-    display: flex;
-    justify-content: center;
-    padding: 50px 0;
-}
-.footer {
-    background-color: #000;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-.footer .social-icon a {
-    padding-right: 15px;
-}
+
+/* قواعد إضافية للوسائط التي تتيح تصميمًا متجاوبًا */
 @media (max-width: 768px) {
     header, section {
         padding: 10px 20px;
@@ -205,29 +120,44 @@ section {
     .navigation a {
         padding-left: 0;
     }
-    .about-image {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .content, .projects .content {
-        flex-direction: column;
-        align-items: center;
-    }
 }
+
 @media (max-width: 480px) {
     header {
         flex-direction: column;
     }
     .logo, .navigation {
-        flex-basis: 100%;
+        flex-basis:100%;
     }
     .main, .cards, .projects, .about, .cards-contact {
         padding: 20px;
     }
-    .footer {
-        flex-direction: column;
+    .navigation {
+        flex-direction: row;
+        justify-content: center;
     }
-    .footer .social-icon {
-        margin-top: 10px;
+    .social-icon a {
+        padding: 0 10px;
     }
+    .main h2 span {
+        font-size: 2em; /* تصغير الخط للشاشات الصغيرة */
+    }
+    .main h3 {
+        font-size: 1.5em; /* تصغير الخط للشاشات الصغيرة */
+    }
+    .main-btn {
+        padding: 0.75em 1.5em; /* تقليل حجم الزر للشاشات الصغيرة */
+        font-size: 1em;
+    }
+}
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer .social-icon a {
+    padding-right: 15px;
 }
