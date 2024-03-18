@@ -1,130 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>NABIL TECH</title>
+    <link rel="icon" href="image/icon.png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Nabil Ghenissa</title>
-    <link rel="icon" href="images/icon.png">
 </head>
 <body>
-    <header>
-        <a href="#" class="logo">Nabil Ghenissa</a>
-        <button class="menu-toggle" aria-label="Open navigation menu">
-            <i class="fas fa-bars"></i>
-        </button>
-        <nav class="navigation">
-            <a href="#services">Services</a>
-            <a href="#projects">Projects</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-    <section class="main">
-        <div>
-            <h2>Hello, I'm Nabil <br><span>Web Developer</span></h2>
-            <h3>Computer Science Student</h3>
-            <a href="#projects" class="main-btn">Go to My Projects</a>
-            <div class="social-icon">
-                <a href="https://www.facebook.com/nabil.ghenissa1"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.instagram.com/nabil_ghenissa"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/nabil-ghenissa"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/nabilghenissa"><i class="fa-brands fa-github"></i></a>
-            </div>
+    <h1>ادوات انتقام سلاطين</h1>
+    <div class="container">
+        <div class="container">
+            <form id="timeForm" class="form-section">
+                <h2>حساب الساعات</h2>
+                <label for="minutes">عدد الدقائق:</label>
+                <input type="number" id="minutes" value="0" min="0" placeholder="min"><br>
+                <label for="fiveMinutes">عدد فترات الخمس دقائائق:</label>
+                <input type="number" id="fiveMinutes" value="0" min="0" placeholder="5min"><br>
+                <label for="hours">عدد الساعات:</label>
+                <input type="number" id="hours" value="0" min="0" placeholder="1H"><br>
+                <label for="eightHours">عدد الساعات (8 ساعات):</label>
+                <input type="number" id="eightHours" value="0" min="0" placeholder="8H"><br>
+                <label for="twelveHours">عدد الساعات (12 ساعة):</label>
+                <input type="number" id="twelveHours" value="0" min="0" placeholder="12H"><br>
+                <label for="twentyFourHours">عدد الساعات (24 ساعة):</label>
+                <input type="number" id="twentyFourHours" value="0" min="0" placeholder="24H"><br>
+                <button type="button" onclick="calculateTotalTime()">احسب الوقت الإجمالي</button>
+                <p id="totalTime">الوقت الإجمالي: </p>
+            </form>
+            <form id="soldierForm" class="form-section">
+                <h2>تدريب الجنود</h2>
+                <label for="trainingTime">مدة تدريب الجندي (بالثواني):</label>
+                <input type="number" id="trainingTime" value="0" min="0"><br>
+                <label for="trainingHours">عدد الساعات لتدريب الجنود:</label>
+                <input type="number" id="trainingHours" value="0" min="0"><br>
+                <label for="singleSoldierIncrease">قوى القتال الجندي واحد:</label>
+                <input type="number" id="singleSoldierIncrease" value="0" min="0"><br>
+                <label for="soldierCountMultiplier">عدد الجنود (بالمليون):</label>
+                <input type="number" id="soldierCountMultiplier" value="0" min="0" step="1"><br>
+                <button type="button" onclick="calculateTrainingCapacity()">احسب عدد الجنود</button>
+                <button type="button" onclick="calculateTotalIncrease()">احسب القوى الإجمالية</button>
+                <p id="result">عدد الجنود الذين يمكن تدريبهم: </p>
+                <p id="increaseResult">الارتفاع الإجمالي: </p>
+            </form>
         </div>
-    </section>
- <section class="cards" id="services">
-        <h2 class="title">Services</h2>
-        <div class="content">
-            <div class="card">
-                <div class="icon">
-                    <i class="fa-brands fa-dev"></i>
-                    <i class="fa-brands fa-html5"></i>
-                    <i class="fa-brands fa-css3-alt"></i>
-                </div>
-                <div class="info">
-                    <h3>Writing Code</h3>
-                    <p>Developing website interfaces and writing code.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="projects" id="projects">
-        <h2 class="title">Projects</h2>
-        <div class="content">
-            <div class="project-cart">
-                <div class="project-image">
-                    <img src="images/project1.jpg" alt="Project 1 Screenshot" />
-                </div>
-                <div class="project-info">
-                    <h3>Project 1</h3>
-                    <p class="project-category">Mini Project</p>
-                    <strong class="project-title">
-                        <span>Website</span>
-                        <a href="http://ghenissa.unaux.com/" class="more-details">More Details</a>
-                    </strong>
-                </div>
-            </div>
-        </div>
-        <div class="content">
-            <div class="project-cart">
-                <div class="project-image">
-                    <img src="images/project2.jpg" alt="Project 2 Screenshot" />
-                </div>
-                <div class="project-info">
-                    <h3>Project 2</h3>
-                    <p class="project-category">My Site Web Resume</p>
-                    <strong class="project-title">
-                        <span>Resume</span>
-                        <a href="https://d.nabilghenissa.tech/" class="more-details">More Details</a>
-                    </strong>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="about" id="about">
-        <h2 class="title">About</h2>
-        <div class="content">
-            <div class="about-info">
-                <h3>Computer Science Student</h3>
-                <p>Hello, I'm Nabil Ghenissa, a Computer Science student at the University of Science and Technology Houari Boumediene.</p>
-            </div>
-            <div class="about-image">
-                <img src="images/usto-logo.jpg" alt="USTHB Logo" />
-            </div>
-            <div class="about-language">
-                <!-- Example icon for language or skill, ensure to replace or add as needed -->
-                <i class="fa-sharp fa-solid fa-c"></i>
-            </div>
-        </div>
-    </section>
-    <section class="cards-contact" id="contact">
-        <h2 class="title">You Have Questions? Contact Me</h2>
-        <div class="content">
-            <div class="card">
-                <div class="icon">
-                    <i class="fa-solid fa-envelope"></i>
-                </div>
-                <div class="info">
-                    <h3>Email</h3>
-                    <p>Via Email:</p>
-                    <a href="mailto:nabil@nabilghenissa.tech">nabil@nabilghenissa.tech</a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="icon">
-                    <i class="fa-solid fa-phone"></i>
-                </div>
-                <div class="info">
-                    <h3>Phone</h3>
-                    <p>Via Phone: +21357927465</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        <form id="contactForm" class="form-section">
+            <h2>تواصل معي</h2>
+            <label for="name">الاسم:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">البريد الإلكتروني:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="message">الرسالة:</label>
+            <textarea id="message" name="message" rows="5" required></textarea><br>
+            <button type="submit">إرسال</button>
+        </form>
+    </div>
     <footer class="footer">
-        <p class="footer-title">Copyright &copy; 2024, Created by <span>Nabil Ghenissa</span></p>
+        <p class="footer-title"> حقوق النشر &copy;2024 , تم إنشاء الموقع بواسطة <span>نبيل غنيصة</span></p>
         <div class="social-icon">
             <a href="https://www.facebook.com/nabil.ghenissa1"><i class="fa-brands fa-facebook"></i></a>
             <a href="https://www.instagram.com/nabil_ghenissa"><i class="fa-brands fa-instagram"></i></a>
